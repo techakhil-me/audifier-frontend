@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #f6f8fb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+.simplebar-scrollbar:before {
+  background-color: #633297 !important;
+}
+.simplebar-track {
+  z-index: 100 !important;
+}
+/* text stroke */
+.text-stroke {
+  -webkit-text-stroke: 2px #121012;
+  -webkit-text-fill-color: transparent;
+}
+.text-stroke-sm {
+  -webkit-text-stroke: 1px #121012;
+  -webkit-text-fill-color: transparent;
+}
+
+.fx-underline {
+  position: relative;
+}
+.fx-underline::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  width: 97%;
+  height: 2px;
+  background-color: #121012;
+  transform: scaleX(0%);
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fx-underline::before {
+  transform-origin: 100% 0;
+}
+.fx-underline:hover::before,
+.Active::before {
+  transform: scaleX(100%);
+  transform-origin: 0 0;
+}
+
+.book-shadow {
+  box-shadow: 0px 16px 20px -8px rgba(0, 0, 0, 0.5);
+}
